@@ -3,15 +3,16 @@
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="refresh" content="5;url=login.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registered successfully</title>
+    <title>View Incomes</title>
 	<link rel="stylesheet" href="css\bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 	<style>
+	.panel { width: 70%; margin:auto;}
+	.panel-default>.panel-heading { text-align: center; }
 	</style>
 </head>
 
@@ -24,32 +25,82 @@
 			</div>
 			<!--	<a class="navbar-brand" href="index.html" style="color: #0099FF;">EXPENSE TRACKER</a>  -->
 			<ul class="nav navbar-nav">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="features.html">Feature Guide</a></li>
-				<li><a href="help.html">Need help?</a></li>
-				<li><a href="feedback.html">Feedback</a></li>
-				<li><a href="about.html">About Us</a></li>
+				<li><a href="login/index.html">Home</a></li>
+				<li><a href="login/features.html">Feature Guide</a></li>
+				<li><a href="login/help.html">Need help?</a></li>
+				<li><a href="login/feedback.html">Feedback</a></li>
+				<li><a href="login/about.html">About Us</a></li>
       		</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="login.html"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
-				<li><a href="register.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Register</a></li>
+				<li><a href="login/dashboard.html"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Dashboard</a></li>
+				<li><a href="login/logout.html"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Log out</a></li>
 			  </ul>
 		</div>		
 	</nav>
-	
 	<br>
-	<hr>
-	<br>
-<br>
-    <h4 class="text-center">Success! We will activate your account soon after review</h4>
-    <br>
-    <hr>
-    <h2 class="text-center">Please use credentials in login page till your account is activated</h2>
-    <hr>
-    <br>
-    <h4 class="text-center">Please wait while you are redirected to login page</h4>
-	
-	<footer class="footer-distributed">
+
+        </div>
+        
+        <br>
+
+<div class="panel panel-default">
+   <div class="panel-heading"><h2>INCOME HISTORY</h2> </div>
+  <div class="panel-body">
+    <p>Summary of all the Income records are diplayed below:</p>
+  </div>
+
+
+<?php
+$servername = "localhost";
+$username = "venkyujg_user";
+$password = "_l.rhJKa=^ST";
+$dbname = "venkyujg_fb";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT * FROM income";
+$result = $conn->query($sql);
+
+ echo "<table class=\"table table-striped\"  >
+	<tr>
+	<th>LABEL</th>
+	<th>AMOUNT</th>
+	<th>ACCOUNT</th>
+	<th>ACC_TYPE</th>
+	<th>SOURCE</th>
+	<th>NOTES</th>";	
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+    	echo "<tr>";
+        echo "<td>" . $row["label"] 	. "</td>";
+        echo "<td>" . $row["amount"] 	. "</td>";
+        echo "<td>" . $row["account"] 	. "</td>";
+        echo "<td>" . $row["acc_type"] 	. "</td>";
+	echo "<td>" . $row["source"] 	. "</td>";
+	echo "<td>" . $row["notes"] 	. "</td>";
+    }
+} else {
+     echo "<tr><td colspan=\"6\"><b>There is no data to display. Please insert some data.<b></td></tr>";	
+}
+mysqli_close($conn);
+?>
+</table>
+<div class="panel-footer">
+<div class="row">
+        <a href="login/dashboard.html"><button type="button" class="btn btn-danger col-lg-1 col-lg-offset-4">GO BACK</button></a>
+        <a href="login/add_income.html"><button type="button" class="btn btn-primary col-lg-1 col-lg-offset-2">ADD INCOME</button></a>
+ 	</div>
+</div>
+</div>
+</div>
+
+		<footer class="footer-distributed">
 
 			<div class="footer-left">
 

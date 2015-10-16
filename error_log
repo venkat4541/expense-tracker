@@ -1,0 +1,6 @@
+[13-Oct-2015 16:57:05 America/New_York] PHP Parse error:  syntax error, unexpected '>' in /home/venkyujg/public_html/etv2/data.php on line 30
+[13-Oct-2015 16:58:33 America/New_York] PHP Parse error:  syntax error, unexpected '>' in /home/venkyujg/public_html/etv2/data.php on line 30
+[13-Oct-2015 17:09:21 America/New_York] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/venkyujg/public_html/etv2/data.php on line 28
+[13-Oct-2015 17:49:50 America/New_York] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/venkyujg/public_html/etv2/data.php on line 37
+[13-Oct-2015 17:50:14 America/New_York] PHP Parse error:  syntax error, unexpected '"<td>"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/venkyujg/public_html/etv2/data.php on line 37
+[14-Oct-2015 16:43:14 America/New_York] PHP Fatal error:  Can't use function return value in write context in /home/venkyujg/public_html/etv2/expense_view.php on line 77

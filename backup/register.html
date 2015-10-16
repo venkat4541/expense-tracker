@@ -4,29 +4,14 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Register</title>
 	<link rel="stylesheet" href="css\bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-	<style>	</style>
-    <script type="text/javascript">
-		function sign(){
-			var user = document.getElementById('usr').value;
-			var pwd = document.getElementById('pwd').value;
-			if (user == "admin@extr.com"){
-				if(pwd == "pass"){
-					document.getElementById('log').action="http://venkatp.xyz/etv2/lgsuccess.html";
-				}
-			}
-			else{
-				alert("Incorrect username/password");
-				document.getElementById("log").action="#";
-				
-			}
-		}
-	</script>
+	<style>
+	</style>
 </head>
 
 
@@ -34,9 +19,8 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-			<h3>Expense<span>Tracker</span></h3>
+				<a class="navbar-brand" href="index.html" style="color: #0099FF;">EXPENSE TRACKER</a>
 			</div>
-			<!--	<a class="navbar-brand" href="index.html" style="color: #0099FF;">EXPENSE TRACKER</a>  -->
 			<ul class="nav navbar-nav">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="features.html">Feature Guide</a></li>
@@ -45,57 +29,70 @@
 				<li><a href="about.html">About Us</a></li>
       		</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="login.html"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
-				<li><a href="register.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Register</a></li>
+				<li><a href="login.html"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
+				<li class="active"><a href="register.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Register</a></li>
 			  </ul>
 		</div>		
 	</nav>
-    <br>
-	<hr>
+	<br>
+<hr>
     <br>
 	<div class="container">
     <div class="row">
-    <div class="col-lg-6 col-lg-offset-3">
+    <div class="col-lg-12">
     <div class="panel panel-primary">
     <div class="panel-heading">
-    <h4 class="text-center">Login</h4>
+    <h4 class="text-center">Sign up for free access to Expense Tracker</h4>
     </div>
     <div class="panel-body">
-    <center><p> Please use <b>admin@extr.com</b> and <b>pass</b> as credentials.</p></center>
-    <form class="form-horizontal" name="login" id="log" onSubmit="sign();">
+    <form class="form-horizontal" action="rgsuccess.html">
+    <br>
+  	<div class="form-group">
+    		<label for="inputName" class="col-sm-4 control-label">Full Name</label>
+   			 <div class="col-sm-4">
+    			<input type="text" class="form-control" id="name" placeholder="John Smith" required>
+    		</div>
+  		</div>
+        <div class="form-group">
+    		<label for="inputName" class="col-sm-4 control-label">Phone</label>
+   			 <div class="col-sm-4">
+    			<input type="phone" class="form-control" id="phone" placeholder="(xxx) xxx-xxxx">
+    		</div>
+  		</div>
+   
+  		<div class="form-group">
+    		<label for="inputEmail3" class="col-sm-4 control-label">Email</label>
+   			 <div class="col-sm-4">
+    			<input type="email" class="form-control" id="mail" placeholder="Email" required>
+    		</div>
+  		</div>
+  	<div class="form-group">
+    	<label for="inputPassword3" class="col-sm-4 control-label">Password</label>
+    	<div class="col-sm-4">
+      		<input type="password" class="form-control" id="pass" placeholder="Password" required>
+   		</div>
+  	</div>
+ 	<div class="form-group">
+    	<label for="inputPassword3" class="col-sm-4 control-label">Re-enter Password</label>
+    	<div class="col-sm-4">
+      		<input type="password" class="form-control" id="inputPassword4" placeholder="Re-type password" required>
+   		</div>
+  	</div>	
+ <br>
   <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="usr" name="mail" placeholder="admin@extr.com">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="pwd" name="pass" placeholder="pass">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <div class="checkbox">
-        <label>
-          <input type="checkbox"> Remember me
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-      <button type="submit" class="btn btn-info col-lg-6 col-sm-offset-3">Sign in</button>
+      <button type="submit" class="btn btn-info col-lg-4 col-sm-offset-4">Register</button>
+       <br>
+         <br>
+            <br>
+      <button type="reset" class="btn btn-warning btn-sm col-sm-2 col-sm-offset-5" value="Reset">Reset</button>
   </div>
 </form>
 </div>
 </div>
-<div class="panel-footer">
-<p class="text-center">Forgot Password? Click here!</p>
+
 </div>
 </div>
-</div>
-</div>
+</div>	
 		<footer class="footer-distributed">
 
 			<div class="footer-left">
@@ -152,9 +149,10 @@
 			</div>
 
 		</footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js\jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="bootstrap.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"></script>
 </body>
 </html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Income</title>
+	<link rel="stylesheet" href="css\bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+         <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+	<style>
+	</style>
+</head>
+
+
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<h3>Expense<span>Tracker</span></h3>
+			</div>
+			<!--	<a class="navbar-brand" href="index.html" style="color: #0099FF;">EXPENSE TRACKER</a>  -->
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="features.html">Feature Guide</a></li>
+				<li><a href="help.html">Need help?</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+				<li><a href="about.html">About Us</a></li>
+      		</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="dashboard.html"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Dashboard</a></li>
+				<li><a href="logout.html"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Log out</a></li>
+			  </ul>
+		</div>		
+	</nav>
+		
+	<hr>
+	<br>
+<div class="container">
+    <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+    <div class="panel panel-success">
+    <div class="panel-heading">
+      <h4 class="text-center">Please add your recent income details below</h4>
+    </div>
+    <div class="panel-body">
+    <form class="form-horizontal" action="insuccess.html" method="post">
+    <div class="form-group">
+  		  <label for="inputEmail2" class="col-sm-3 control-label">Label</label>
+  		  <div class="col-sm-6">
+    			<input type="text" class="form-control" id="income" name="label" placeholder="Name of the income" required>
+    		</div>
+  		</div>
+    
+   		<div class="form-group">
+   		  <label for="inputName3" class="col-sm-3 control-label">Amount</label>
+   		  <div class="col-sm-6">
+    			<div class="input-group">
+  <span class="input-group-addon">$</span>
+  <input type="text" class="form-control" name="amount" aria-label="Amount (to the nearest dollar)" required>
+  <span class="input-group-addon">.00</span>
+</div>
+    		</div>
+  		</div>
+        <div class="form-group">
+        	  <label for="inputName2" class="col-sm-3 control-label">Account deposited</label>
+        	  <div class="col-sm-6">
+    			<select class="form-control" id="account" name="account">
+                    <option>Bank of America</option>
+                    <option>Citibank</option>
+                    <option>Wells Fargo</option>
+                    <option>Received Cash</option>
+                </select>  
+    		</div>
+  		</div>
+        	<div class="form-group">
+        	  <label for="inputName2" class="col-sm-3 control-label">Account type</label>
+        	  <div class="col-sm-6">
+    			<select class="form-control" id="actype" name="acc_typ">
+                    <option>Savings Account</option>
+                    <option>Checking Account</option>
+                    <option>Cash</option>
+                </select>  
+    		</div>
+  		</div>
+        <div class="form-group">
+  		  <label for="inputEmail2" class="col-sm-3 control-label">Income source type</label>
+  		  <div class="col-sm-6">
+    			<select class="form-control" id="incometype" name="source">
+                    <option>Salary</option>
+                    <option>Lottery</option>
+                    <option>Refunds</option>
+                    <option>Sold Properties</option>
+                </select>  
+    		</div>
+  		</div>
+  		
+        <div class="form-group">
+          <label for="inputEmail4" class="col-sm-3 control-label">Notes</label>
+          <div class="col-sm-6">
+        <textarea class="form-control" rows="5" name="notes"></textarea>
+        </div>
+        </div>
+  <div class="form-group">
+      <button type="submit" class="btn btn-success col-lg-6 col-sm-offset-3">Add Income</button>
+      <br>
+         <br>
+            <br>
+      <button type="reset" class="btn btn-default btn-sm col-sm-4 col-sm-offset-4" value="Reset">Reset Form</button>
+  </div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Expense<span>Tracker</span></h3>
+
+				<p class="footer-links">
+					<a href="index.html">Home</a>
+					.
+					<a href="features.html">Features</a>
+					.
+					<a href="help.html">Help</a>
+					.
+					<a href="feedback.html">Feedback</a>
+				</p>
+				<p class="footer-company-name">Expense Tracker &copy; 2015</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>4400 University Dr</span> Fairfax, Virginia</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 703 12345</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@support@venkatp.xyz">support@venkatp.xyz</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Expense Tracker is a free online tool created and maintained by a group of Indian 				                    students.
+                </p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+	
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js\jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="..\js\bootstrap.min.js"></script>
+</body>
+</html>

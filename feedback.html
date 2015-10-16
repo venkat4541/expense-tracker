@@ -4,9 +4,12 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Features</title>
+    <title>Feedback</title>
 	<link rel="stylesheet" href="css\bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 	<style>
 	</style>
 </head>
@@ -16,8 +19,9 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html" style="color: #0099FF;">EXPENSE TRACKER</a>
+			<h3>Expense<span>Tracker</span></h3>
 			</div>
+			<!--	<a class="navbar-brand" href="index.html" style="color: #0099FF;">EXPENSE TRACKER</a>  -->
 			<ul class="nav navbar-nav">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="features.html">Feature Guide</a></li>
@@ -31,79 +35,120 @@
 			  </ul>
 		</div>		
 	</nav>
-	
+	<br><br><br>
 	<div class="container">
     <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
+    <div class="col-lg-10 col-lg-offset-1">
     <div class="panel panel-default">
     <div class="panel-heading">
     <h4 class="text-center">Please enter your feedback on how we can improve the app</h4>
     </div>
     <div class="panel-body">
-    <form class="form-horizontal">
+    <form class="form-horizontal" action="insert.php" method="post">
    		<div class="form-group">
     		<label for="inputName" class="col-sm-3 control-label">Full Name</label>
-   			 <div class="col-sm-5">
-    			<input type="text" class="form-control" id="name" placeholder="John Smith">
+   			 <div class="col-sm-6">
+    			<input type="text" class="form-control" name="name" id="name" placeholder="John Smith">
     		</div>
   		</div>
         	<div class="form-group">
     		<label for="inputName" class="col-sm-3 control-label">Phone</label>
-   			 <div class="col-sm-5">
-    			<input type="phone" class="form-control" id="phone" placeholder="(xxx) xxx-xxxx">
+   			 <div class="col-sm-6">
+    			<input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter 10 digit phone number.   Ex: 1234567890">
     		</div>
   		</div>
   		<div class="form-group">
     		<label for="inputEmail3" class="col-sm-3 control-label">Email</label>
-             <div class="col-sm-5">
-    			<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+             <div class="col-sm-6">
+    			<input type="email" class="form-control" id="inputEmail3" name="email" placeholder="abc@xyz.com" required>
     		</div>
   		</div>
         <div class="form-group">
         <label for="inputEmail3" class="col-sm-3 control-label">Feedback</label>
-  		<div class="col-sm-8">
-        <textarea class="form-control" rows="8"></textarea>
+  		<div class="col-sm-8 col-lg-6">
+        <textarea class="form-control" rows="10" name="comments" required placeholder="Enter your feedback of upto 150 letters"></textarea>
         </div>
         </div>
         
-        <div class="form-group">
+       <div class="form-group">
         <label for="inputEmail3" class="col-sm-3 control-label"> Can we contact you?</label>
-  		<div class="col-sm-5">
-        <label class="checkbox-inline"> &nbsp <input type="checkbox" value="">Yes</label><label class="checkbox-inline"><input type="checkbox" value="">No</label>
+  		<div class="col-sm-6">
+          	<label class="radio-inline col-sm-2"><input type="radio" name="optradio" class="radio-inline" checked="">Yes</label>	
+  			<label class="radio-inline"><input type="radio" name="optradio" class="radio-inline">No</label>
         </div>
         </div>
-        
-        
-    </div>
-  </div>
+ 
   <div class="form-group">
-      <button type="submit" class="btn col-lg-5 col-sm-offset-3">Submit Feedback</button>
-  </div>
+      <button type="submit" class="btn btn-info col-lg-4 col-sm-offset-4">Submit Feedback</button>
+      <br>
+         <br>
+            <br>
+      <button type="reset" class="btn btn-warning btn-sm col-sm-2 col-sm-offset-5" value="Reset">Reset</button>
+      </div>
   
 </form>
+</div>
+</div>
+</div>
+</div>
+</div>
 	
-<!-- Search Bar
-					<form class="navbar-form navbar-left" role="search">
-					<div class="form-group">
-					<input type="text" class="form-control" placeholder="Search">
-					</div>
-					<button type="submit" class="btn btn-default">Submit</button>
-					</form>
--->
-<!-- Drop down menu item
-					<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li role="separator" class="divider"></li>
-					<li><a href="#">Separated link</a></li>
-					<li role="separator" class="divider"></li>
-					<li><a href="#">One more separated link</a></li>
-					</ul>
-					</li> 
- -->
+	<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Expense<span>Tracker</span></h3>
+
+				<p class="footer-links">
+					<a href="index.html">Home</a>
+					.
+					<a href="features.html">Features</a>
+					.
+					<a href="help.html">Help</a>
+					.
+					<a href="feedback.html">Feedback</a>
+				</p>
+				<p class="footer-company-name">Expense Tracker &copy; 2015</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>4400 University Dr</span> Fairfax, Virginia</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 703 12345</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@support@venkatp.xyz">support@venkatp.xyz</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Expense Tracker is a free online tool created and maintained by a group of Indian 				                    students.
+                </p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
 	
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js\jquery.min.js"></script>
